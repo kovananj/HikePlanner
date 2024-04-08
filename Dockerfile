@@ -1,6 +1,6 @@
 # Usage
-# docker build -t mosazhaw/hikeplanner .
-# docker run --name hikeplanner -e AZURE_STORAGE_CONNECTION_STRING='***' -p 9001:5000 -d mosazhaw/hikeplanner
+# docker buildx build --platform linux/amd64 -t kovananj/hikeplanner .
+# docker run --name hikeplanner -e AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=kovananj;AccountKey=NyEFGiCNhE77dCIML0GKixU8PNWJlj51iEBxADJQ2BW84BZm08GNV21wKkObHD8OdlwkQR8T6qcL+AStthlc7A==;EndpointSuffix=core.windows.net -p 9001:80 -d kovananj/hikeplanner
 
 FROM python:3.12.1
 

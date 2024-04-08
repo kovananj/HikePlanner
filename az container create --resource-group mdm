@@ -1,0 +1,8 @@
+az container create --resource-group mdm-hikeplanner --name container-hikeplanner --image kovananj/hikeplanner2:latest --dns-name-label kovananj-hikeplanner --ports 80 --environment-variables
+AZURE_STORAGE_CONNECTION_STRING='DefaultEndpointsProtocol=https;AccountName=kovananj;AccountKey=NyEFGiCNhE77dCIML0GKixU8PNWJlj51iEBxADJQ2BW84BZm08GNV21wKkObHD8OdlwkQR8T6qcL+AStthlc7A==;EndpointSuffix=core.windows.net‘
+
+
+az container create --resource-group mdm-hikeplanner --name container-hikeplanner --image kovananj/hikeplanner2:latest --dns-name-label kovananj-hikeplanner --ports 80 --environment-variables AZURE_STORAGE_CONNECTION_STRING='DefaultEndpointsProtocol=https;AccountName=kovananj;AccountKey=NyEFGiCNhE77dCIML0GKixU8PNWJlj51iEBxADJQ2BW84BZm08GNV21wKkObHD8OdlwkQR8T6qcL+AStthlc7A==;EndpointSuffix=core.windows.net'
+
+
+docker buildx build --platform linux/amd64 -t kovananj/hikeplanner .
